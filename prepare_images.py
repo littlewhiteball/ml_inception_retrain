@@ -12,7 +12,7 @@ def create_empty_dir(directory):
     os.makedirs(directory)
 
 for home_path, _, image_names in walk(home_dir):
-    # get index of training images
+    # randomly allocate images to training and validation folder
     number_images = len(image_names)
     number_training = math.floor(float(number_images) * float(train_percent))
     index_training = random.sample(range(number_images), number_training)
