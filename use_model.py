@@ -73,7 +73,7 @@ def main(validation_dir):
                     break
 
             # Print out accuracy
-            print('%.3f' % accuracy)
+            print(accuracy)
 
             # Only the first level of sub folders of validation directory
             break
