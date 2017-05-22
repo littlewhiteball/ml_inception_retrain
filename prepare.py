@@ -3,7 +3,7 @@ import datetime, sys
 
 start = datetime.datetime.now()
 
-percentage = .95
+percentage = .85
 if len(sys.argv) > 1:
     percentage = sys.argv[1]
 
