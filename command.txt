@@ -1,0 +1,21 @@
+retrain:
+python src/retrain.py \
+--bottleneck_dir=tf_files/bottlenecks \
+--how_many_training_steps 1000 \
+--model_dir=tf_files/inception \
+--output_graph=tf_files/retrained_graph.pb \
+--output_labels=tf_files/retrained_labels.txt \
+--image_dir training
+
+use model:
+python src/label_image.py validation/{category}/1.jpeg
+
+use model with validation:
+python src/validate.py validation/
+
+prepare images:
+python src/prepare_images.py images/{category}/ training/{category} validation/{category} .95
+
+image url:
+https://i-msdn.sec.s-msft.com/dynimg/IC868604.jpg
+

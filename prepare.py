@@ -7,7 +7,7 @@ percentage = .85
 if len(sys.argv) > 1:
     percentage = sys.argv[1]
 
-prepare_model.main('../images/', '../training', '../validation/', percentage)
+prepare_model.main('images/', 'training', 'validation/', percentage)
 
 end = datetime.datetime.now()
 

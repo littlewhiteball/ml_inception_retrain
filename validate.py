@@ -3,7 +3,7 @@ import datetime
 
 start = datetime.datetime.now()
 
-use_model.main('../validation')
+use_model.main('validation')
 
 end = datetime.datetime.now()
 
